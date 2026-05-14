@@ -3,7 +3,18 @@ import { ArrowUpRight, Check, Filter, ShieldCheck, Sparkles } from "lucide-react
 import { DashboardCharts } from "@/components/dashboard-charts";
 import type { Template } from "@/data/templates";
 
+
+import { GoaResortDemo } from "@/components/demos/goa-resort";
+
+
 export function DemoLayoutRenderer({ template }: { template: Template }) {
+  
+  switch (template.id) {
+    case "goa-resort-booking-system":
+      return <GoaResortDemo template={template} />;
+  }
+
+  
   switch (template.layoutType) {
     case "vibrant":
       return <VibrantLayout template={template} />;
