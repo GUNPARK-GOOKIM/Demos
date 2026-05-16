@@ -8,7 +8,8 @@ export function ThemeToggle() {
   const isDark = theme === "dark";
 
   return (
-    <button
+    <button 
+    suppressHydrationWarning 
       type="button"
       onClick={toggleTheme}
       aria-label="Toggle light and dark theme"
@@ -18,7 +19,7 @@ export function ThemeToggle() {
         borderColor: "var(--border)",
         color: "var(--foreground)"
       }}
-    >
+    > {/* <-- Moved the '>' to here, closing the opening tag */}
       {isDark ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
       <span>{isDark ? "Dark" : "Light"}</span>
     </button>
