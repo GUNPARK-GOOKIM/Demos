@@ -4,7 +4,13 @@ import { DashboardCharts } from "@/components/dashboard-charts";
 import { GoaResortDemo } from "@/components/demos/goa-resort";
 import { KeralaDemo } from "@/components/demos/kerala-tour";
 import { FitnessDemo } from "@/components/demos/fitness";
+import { SafariMPDemo } from "@/components/demos/safari-mp";
 import type { Template } from "@/data/templates";
+import { RealEstateDemo } from "@/components/demos/real-estate";
+import { SalesDashboardDemo } from "@/components/demos/sales-dashboard";
+import { ClinicDemo } from "@/components/demos/clinic";
+
+
 
 export function DemoLayoutRenderer({ template }: { template: Template }) {
   switch (template.id) {
@@ -14,6 +20,15 @@ export function DemoLayoutRenderer({ template }: { template: Template }) {
       return <KeralaDemo template={template} />;
     case "fitness-kinetic-sales-page":
       return <FitnessDemo template={template} />;
+    case "mp-safari-booking":
+      return <SafariMPDemo template={template} />;
+    case "real-estate-launchpad":
+      return <RealEstateDemo template={template} />;
+    case "sales-analytics-command-center":
+      return <SalesDashboardDemo template={template} />;
+    case "clinic-trust-architecture":
+      return <ClinicDemo template={template} />;
+
   }
 
   switch (template.layoutType) {
@@ -25,6 +40,7 @@ export function DemoLayoutRenderer({ template }: { template: Template }) {
       return <KineticLayout template={template} />;
     case "dashboard":
       return <DashboardLayout template={template} />;
+
     default:
       return null;
   }

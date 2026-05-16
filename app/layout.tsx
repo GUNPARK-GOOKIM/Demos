@@ -5,11 +5,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://akshat-agency.vercel.app"),
-  title: "Akshat Lakhera | White-Label Agency Platform",
+  title: "Forge Layer | Premium Web Architecture Studio",
   description:
     "Premium web architecture, polymorphic demo layouts, dashboards, and conversion systems for modern businesses.",
   openGraph: {
-    title: "Akshat Lakhera | White-Label Agency Platform",
+    title: "Forge Layer | Premium Web Architecture Studio",
     description:
       "High-performance, end-to-end web applications engineered to convert.",
     type: "website"

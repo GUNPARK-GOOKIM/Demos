@@ -212,8 +212,7 @@ export function KeralaDemo({ template }: { template: Template }) {
                 </div>
               </div>
               <div className="kt-about-wrap" style={{ position:"relative",height:520,borderRadius:20,overflow:"hidden",cursor:"pointer" }}>
-                <img className="kt-about-img" src={u("photo-1609766418204-94aae0ecfcf7")} alt="Kerala" style={{ width:"100%",height:"100%",objectFit:"cover" }}/>
-                <div style={{ position:"absolute",inset:0,background:"linear-gradient(to top,rgba(5,20,10,.7) 0%,transparent 50%)" }}/>
+<img className="kt-about-img" src={u("photo-1582510003544-4d00b7f74220")} alt="Kerala" style={{ width:"100%",height:"100%",objectFit:"cover" }}/>                 <div style={{ position:"absolute",inset:0,background:"linear-gradient(to top,rgba(5,20,10,.7) 0%,transparent 50%)" }}/>
                 <div style={{ position:"absolute",bottom:24,left:24,right:24 }}>
                   <div style={{ background:"rgba(255,255,255,.1)",backdropFilter:"blur(12px)",borderRadius:14,padding:"16px 20px",border:"1px solid rgba(255,255,255,.15)" }}>
                     <div style={{ fontWeight:700,fontSize:14,color:"#fff",marginBottom:4 }}>📍 Kerala-based, not outsourced</div>

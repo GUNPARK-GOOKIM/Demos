@@ -295,6 +295,34 @@ export const templates: Template[] = [
         { name: "Ops", value: 12 }
       ]
     }
+  },
+  {
+    id: "mp-safari-booking",
+    category: "Wildlife / Safari",
+    title: "MP Safari Booking",
+    layoutType: "vibrant",
+    complexityTier: "Booking",
+    calculatedPrice: "₹25,000",
+    summary:
+      "Immersive safari booking for Bandhavgarh, Kanha, Pench & Satpura — tiger sighting stats, park selector, WhatsApp booking.",
+    image:
+      "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1600&q=85",
+    imageAlt: "Tiger in Bandhavgarh National Park",
+    accent: "#f59e0b",
+    location: "Madhya Pradesh",
+    filters: ["Bandhavgarh", "Kanha", "Pench", "Satpura"],
+    features: [
+      "Park selector with sighting stats",
+      "Package cards with naturalist details",
+      "Wildlife probability guide",
+      "Seasonal chart",
+      "WhatsApp booking bridge"
+    ],
+    metrics: [
+      { label: "Sighting Rate", value: "94%" },
+      { label: "Parks", value: "4" },
+      { label: "Best for", value: "Wildlife" }
+    ]
   }
 ];
 

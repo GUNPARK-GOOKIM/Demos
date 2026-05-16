@@ -17,8 +17,7 @@ const PACKAGES = [
   { name: "Family Fun Pack", nights: "3N/4D", price: "₹28,000", items: ["Pool Villa","Kids club","Water sports","All meals"] },
   { name: "Weekend Getaway", nights: "1N/2D", price: "₹9,500", items: ["Deluxe Room","Breakfast","Pool access","Bonfire"] },
 ];
-const GALLERY = ["photo-1520250497591-112f2f40a3f4","photo-1571003123894-1f0594d2b5d9","photo-1584132967334-10e028bd69f7","photo-1445019980597-93fa8acb246c","photo-1551882547-ff40c4a49f6e","photo-1573843981267-be1480443cce"];
-const AMENITIES = [{ I: Wifi, l: "Hi-Speed Wi-Fi" },{ I: Utensils, l: "Beach Restaurant" },{ I: Waves, l: "Private Beach" },{ I: Wind, l: "AC in All Rooms" },{ I: Car, l: "Airport Transfer" },{ I: Coffee, l: "24/7 Room Service" }];
+const GALLERY = ["photo-1520250497591-112f2f40a3f4","photo-1571003123894-1f0594d2b5d9","photo-1584132967334-10e028bd69f7","photo-1445019980597-93fa8acb246c","photo-1566073771259-6a8506099945","photo-1439130490301-25e322d88054"];const AMENITIES = [{ I: Wifi, l: "Hi-Speed Wi-Fi" },{ I: Utensils, l: "Beach Restaurant" },{ I: Waves, l: "Private Beach" },{ I: Wind, l: "AC in All Rooms" },{ I: Car, l: "Airport Transfer" },{ I: Coffee, l: "24/7 Room Service" }];
 const REVIEWS = [
   { n: "Priya S.", c: "Mumbai", t: "Waking up to the ocean every morning was unlike anything. The staff is genuinely world-class." },
   { n: "Rahul & Anita", c: "Bangalore", t: "Pool villa with private chef on call — we'll be back every anniversary. Just perfect." },
@@ -140,8 +139,7 @@ export function GoaResortDemo({ template }: { template: Template }) {
                 ))}
               </div>
               <div className="gr-about-img" style={{ position:"relative",height:500,borderRadius:28,overflow:"hidden" }}>
-                <Image src={u("photo-1540202404-b2dcfed05450")} alt="Resort pool" fill style={{ objectFit:"cover" }} sizes="50vw"/>
-                <div style={{ position:"absolute",bottom:20,left:20,right:20,background:"rgba(255,255,255,.95)",borderRadius:16,padding:"16px 20px",display:"flex",alignItems:"center",gap:14 }}>
+<Image src={u("photo-1566073771259-6a8506099945")} alt="Resort pool" fill style={{ objectFit:"cover" }} sizes="50vw"/>                <div style={{ position:"absolute",bottom:20,left:20,right:20,background:"rgba(255,255,255,.95)",borderRadius:16,padding:"16px 20px",display:"flex",alignItems:"center",gap:14 }}>
                   <div style={{ width:42,height:42,borderRadius:12,background:"#dcfce7",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,fontSize:20 }}>✅</div>
                   <div>
                     <div style={{ fontWeight:700,fontSize:14,color:"#0f172a" }}>ISO 9001 Certified Property</div>
