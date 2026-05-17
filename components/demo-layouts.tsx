@@ -9,8 +9,8 @@ import type { Template } from "@/data/templates";
 import { RealEstateDemo } from "@/components/demos/real-estate";
 import { SalesDashboardDemo } from "@/components/demos/sales-dashboard";
 import { ClinicDemo } from "@/components/demos/clinic";
-
-
+import { RestaurantDemo } from "@/components/demos/restaurant";
+import { OpsDashboardDemo } from "@/components/demos/ops-dashboard";
 
 export function DemoLayoutRenderer({ template }: { template: Template }) {
   switch (template.id) {
@@ -28,6 +28,10 @@ export function DemoLayoutRenderer({ template }: { template: Template }) {
       return <SalesDashboardDemo template={template} />;
     case "clinic-trust-architecture":
       return <ClinicDemo template={template} />;
+    case "restaurant-social-engine":
+      return <RestaurantDemo template={template} />;
+    case "operations-dashboard-vault":
+      return <OpsDashboardDemo template={template} />;
 
   }
 

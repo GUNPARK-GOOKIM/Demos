@@ -2,6 +2,7 @@ import { ArrowDown, Code2, Cpu, DatabaseZap, PanelsTopLeft } from "lucide-react"
 import { DemoVault } from "@/components/demo-vault";
 import { Reveal } from "@/components/reveal";
 import { AboutSection } from "@/components/about-section";
+import { QueryForm } from "@/components/query-form";
 import { capabilities, templates } from "@/data/templates";
 
 const capabilityIcons = [Code2, Cpu, PanelsTopLeft, DatabaseZap];
@@ -77,6 +78,7 @@ export default function Home() {
         </div>
       </section>
 
+      <QueryForm />
       <AboutSection />
     </main>
   );

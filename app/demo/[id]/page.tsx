@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ConversionFooter } from "@/components/conversion-footer";
 import { DemoLayoutRenderer } from "@/components/demo-layouts";
+import { QueryForm } from "@/components/query-form";
 import { getTemplate, templates } from "@/data/templates";
 
 type DemoPageProps = {
@@ -24,15 +25,15 @@ export async function generateMetadata({
 
   if (!template) {
     return {
-      title: "Demo Not Found | Akshat Lakhera"
+      title: "Demo Not Found | Forge Layer"
     };
   }
 
   return {
-    title: `${template.title} | Akshat Lakhera`,
+    title: `${template.title} | Forge Layer`,
     description: template.summary,
     openGraph: {
-      title: `${template.title} | Akshat Lakhera`,
+      title: `${template.title} | Forge Layer`,
       description: template.summary,
       images: [template.image]
     }
@@ -50,6 +51,7 @@ export default async function DemoPage({ params }: DemoPageProps) {
   return (
     <main>
       <DemoLayoutRenderer template={template} />
+      <QueryForm templateName={template.title} />
       <div id="conversion-footer">
         <ConversionFooter template={template} />
       </div>
