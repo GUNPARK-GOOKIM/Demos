@@ -10,7 +10,7 @@ const capabilityIcons = [Code2, Cpu, PanelsTopLeft, DatabaseZap];
 export default function Home() {
   return (
     <main>
-      <section className="relative overflow-hidden px-5 py-14 sm:px-8 lg:py-16">
+      <section className="relative flex min-h-[85vh] items-center overflow-hidden px-5 py-14 sm:px-8 lg:py-16">
         <div className="absolute inset-0 -z-10 theme-grid opacity-50" />
         <div className="mx-auto max-w-7xl">
           <Reveal>

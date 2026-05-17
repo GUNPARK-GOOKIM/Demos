@@ -79,7 +79,7 @@ export function DemoVault({ templates }: { templates: Template[] }) {
         </div>
       </div>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {filteredTemplates.map((template, index) => (
           <motion.article
             key={template.id}
