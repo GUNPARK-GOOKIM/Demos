@@ -1,6 +1,5 @@
 import { MessageCircle, Phone } from "lucide-react";
 import type { Template } from "@/data/templates";
-import { getWhatsAppHref } from "@/data/templates";
 
 export function ConversionFooter({ template }: { template: Template }) {
   return (
@@ -11,16 +10,14 @@ export function ConversionFooter({ template }: { template: Template }) {
           <span className="h-1 w-1 rounded-full bg-[var(--accent)]" />
           <span className="inline-flex items-center gap-2">
             <Phone className="h-4 w-4" />
-            +91 9516916303
+            +91 9285328987
           </span>
           <span className="rounded-full bg-[var(--foreground)] px-3 py-1 text-[var(--background)]">
             {template.calculatedPrice}
           </span>
         </div>
         <a
-          href={getWhatsAppHref(template)}
-          target="_blank"
-          rel="noreferrer"
+          href="#inquiry"
           className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 text-sm font-black text-[var(--ink)] transition hover:-translate-y-0.5"
         >
           Discuss This Build

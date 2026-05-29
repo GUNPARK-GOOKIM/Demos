@@ -3,7 +3,12 @@ import { notFound } from "next/navigation";
 import { ConversionFooter } from "@/components/conversion-footer";
 import { DemoLayoutRenderer } from "@/components/demo-layouts";
 import { QueryForm } from "@/components/query-form";
-import { getTemplate, templates } from "@/data/templates";
+import {
+  getTemplate,
+  getTemplateInquiryBudgetRange,
+  getTemplateInquiryWebsiteType,
+  templates
+} from "@/data/templates";
 
 type DemoPageProps = {
   params: Promise<{
@@ -54,7 +59,12 @@ export default async function DemoPage({ params }: DemoPageProps) {
       <div id="conversion-footer">
         <ConversionFooter template={template} />
       </div>
-      <QueryForm templateName={template.title} />
+      <QueryForm
+        templateName={template.title}
+        templateCategory={template.category}
+        prefilledBudget={getTemplateInquiryBudgetRange(template)}
+        prefilledWebsiteType={getTemplateInquiryWebsiteType(template)}
+      />
     </main>
   );
 }

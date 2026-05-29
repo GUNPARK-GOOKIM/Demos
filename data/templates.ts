@@ -345,3 +345,40 @@ export function getWhatsAppHref(template: Template) {
   const message = `Hi Akshat, I am interested in building a website. I like the ${template.category} template named ${template.title}. The estimated price is ${template.calculatedPrice}. Let's discuss!`;
   return `https://wa.me/919285328987?text=${encodeURIComponent(message)}`;
 }
+
+export function getTemplateInquiryWebsiteType(template: Template) {
+  const category = template.category.toLowerCase();
+  if (category.includes("travel") || category.includes("resort") || category.includes("wildlife")) {
+    return "Hotel / Resort Booking";
+  }
+  if (category.includes("real estate")) {
+    return "Real Estate";
+  }
+  if (category.includes("restaurant")) {
+    return "Restaurant / Cafe";
+  }
+  if (category.includes("health")) {
+    return "Healthcare / Clinic";
+  }
+  if (category.includes("dashboard")) {
+    return "SaaS / Dashboard";
+  }
+  return "Business / Corporate";
+}
+
+export function getTemplateInquiryBudgetRange(template: Template) {
+  const hasPlus = template.calculatedPrice.includes("+");
+  const firstAmount = template.calculatedPrice.match(/[\d,]+/)?.[0] ?? "0";
+  const amount = Number(firstAmount.replace(/,/g, ""));
+
+  if (hasPlus || amount >= 50000) {
+    return "INR 60,000 - INR 1,00,000";
+  }
+  if (amount >= 25000) {
+    return "INR 15,000 - INR 30,000";
+  }
+  if (amount >= 5000) {
+    return "INR 5,000 - INR 15,000";
+  }
+  return "Not sure yet";
+}
