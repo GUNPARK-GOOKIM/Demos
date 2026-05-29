@@ -8,7 +8,8 @@ const capabilityIcons = [Code2, Cpu, PanelsTopLeft, DatabaseZap];
 export default function Home() {
   return (
     <main>
-      <section className="relative min-h-[100svh] overflow-hidden px-5 sm:px-8 flex flex-col justify-center">
+      <div className="hero-stage">
+      <section className="hero relative min-h-[100svh] overflow-hidden px-5 sm:px-8 flex flex-col justify-center">
         <div className="absolute inset-0 -z-10 theme-grid opacity-50" />
 
         <div className="mx-auto w-full max-w-7xl pt-24 pb-20">
@@ -42,7 +43,7 @@ export default function Home() {
                 style={{ background:"var(--foreground)", color:"var(--background)" }}>
                 See the Work <ArrowDown className="h-4 w-4" />
               </a>
-              <a href="https://wa.me/919516916303" target="_blank" rel="noreferrer"
+              <a href="https://wa.me/919285328987" target="_blank" rel="noreferrer"
                 className="inline-flex h-13 items-center gap-2 rounded-full border px-7 text-sm font-black transition-all hover:-translate-y-1"
                 style={{ borderColor:"var(--border)", color:"var(--foreground)" }}>
                 Let&apos;s Talk
@@ -67,6 +68,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </div>
 
       <Reveal>
         <DemoVault templates={templates} />
@@ -114,7 +116,7 @@ export default function Home() {
               <p className="mt-5 text-lg max-w-xl mx-auto" style={{ color:"var(--muted)" }}>
                 WhatsApp Akshat directly. No forms, no waiting — just a real conversation about what you need.
               </p>
-              <a href="https://wa.me/919516916303" target="_blank" rel="noreferrer"
+              <a href="https://wa.me/919285328987" target="_blank" rel="noreferrer"
                 className="mt-10 inline-flex h-14 items-center gap-2.5 rounded-full px-10 text-sm font-black transition-all hover:-translate-y-1"
                 style={{ background:"var(--accent)", color:"var(--ink)" }}>
                 Start on WhatsApp →

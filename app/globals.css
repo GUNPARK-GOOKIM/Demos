@@ -79,6 +79,31 @@ a {
   background-size: 56px 56px;
 }
 
+.hero-stage {
+  position: relative;
+  height: 190svh;
+}
+
+.hero {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+@supports (animation-timeline: scroll()) {
+  .hero {
+    animation: hero-fade linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 100svh;
+  }
+}
+
+@keyframes hero-fade {
+  to {
+    opacity: 0;
+  }
+}
+
 .marquee {
   animation: marquee 18s linear infinite;
 }

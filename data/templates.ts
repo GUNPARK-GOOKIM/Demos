@@ -343,5 +343,5 @@ export function getTemplateHref(template: Template) {
 
 export function getWhatsAppHref(template: Template) {
   const message = `Hi Akshat, I am interested in building a website. I like the ${template.category} template named ${template.title}. The estimated price is ${template.calculatedPrice}. Let's discuss!`;
-  return `https://wa.me/919516916303?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/919285328987?text=${encodeURIComponent(message)}`;
 }

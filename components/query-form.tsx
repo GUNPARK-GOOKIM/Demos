@@ -33,7 +33,7 @@ type QueryFormProps = {
 
 export function QueryForm({
   templateName,
-  whatsappNumber = "919516916303",
+  whatsappNumber = "919285328987",
 }: QueryFormProps) {
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
