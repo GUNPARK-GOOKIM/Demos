@@ -41,6 +41,7 @@ html[data-theme="dark"] {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -81,7 +82,7 @@ a {
 
 .hero-stage {
   position: relative;
-  height: 190svh;
+  height: 165svh;
 }
 
 .hero {
@@ -106,6 +107,12 @@ a {
 
 .marquee {
   animation: marquee 18s linear infinite;
+}
+
+@media (min-width: 640px) {
+  .hero-stage {
+    height: 190svh;
+  }
 }
 
 @keyframes marquee {

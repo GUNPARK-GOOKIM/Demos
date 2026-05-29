@@ -94,6 +94,7 @@ export function QueryForm({
     if (!form.name || !form.email || !form.phone) return;
 
     setStatus("sending");
+    // Open a popup synchronously to avoid popup blockers; fallback to same-tab redirect.
     const popup = window.open("", "_blank");
 
     try {
@@ -116,7 +117,7 @@ export function QueryForm({
       if (popup) {
         popup.location.href = waUrl;
       } else {
-        window.open(waUrl, "_blank");
+        window.location.href = waUrl;
       }
       setStatus("sent");
       setTimeout(() => setStatus("idle"), 5000);

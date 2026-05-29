@@ -32,13 +32,13 @@ export function DemoVault({ templates }: { templates: Template[] }) {
   );
 
   return (
-    <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8" id="demo-vault">
+    <div className="mx-auto max-w-7xl px-4 py-20 sm:px-8 sm:py-24" id="demo-vault">
       <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
         <div>
-          <p className="text-sm font-black uppercase tracking-[0.28em] text-[var(--accent)]">
+          <p className="text-xs font-black uppercase tracking-[0.24em] text-[var(--accent)] sm:text-sm sm:tracking-[0.28em]">
             Demo Vault
           </p>
-          <h2 className="mt-4 text-4xl font-black tracking-tight sm:text-6xl">
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-6xl">
             Choose the architecture. The engine adapts.
           </h2>
         </div>
@@ -46,10 +46,11 @@ export function DemoVault({ templates }: { templates: Template[] }) {
           <div className="relative">
             <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 opacity-55" />
             <input
+              suppressHydrationWarning
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search templates, industries, dashboards"
-              className="h-13 w-full rounded-full border bg-[var(--surface)] pl-11 pr-4 text-sm font-semibold outline-none transition focus:border-[var(--accent)]"
+              className="h-12 w-full rounded-full border bg-[var(--surface)] pl-11 pr-4 text-sm font-semibold outline-none transition focus:border-[var(--accent)] sm:h-13"
               style={{ borderColor: "var(--border)" }}
             />
           </div>
@@ -59,7 +60,7 @@ export function DemoVault({ templates }: { templates: Template[] }) {
                 key={layout}
                 type="button"
                 onClick={() => setActiveLayout(layout)}
-                className="rounded-full border px-4 py-2 text-sm font-bold capitalize transition hover:-translate-y-0.5"
+                className="rounded-full border px-3 py-2 text-xs font-bold capitalize transition hover:-translate-y-0.5 sm:px-4 sm:text-sm"
                 style={{
                   background:
                     activeLayout === layout
@@ -107,12 +108,12 @@ export function DemoVault({ templates }: { templates: Template[] }) {
               </div>
               <div className="grid gap-4 p-5">
                 <div className="flex items-center justify-between gap-3">
-                  <p className="text-xs font-black uppercase tracking-[0.2em] text-[var(--accent)]">
+                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[var(--accent)] sm:text-xs sm:tracking-[0.2em]">
                     {template.category}
                   </p>
                   <Layers3 className="h-4 w-4 opacity-60" />
                 </div>
-                <h3 className="text-2xl font-black tracking-tight">
+                <h3 className="text-xl font-black tracking-tight sm:text-2xl">
                   {template.title}
                 </h3>
                 <p className="text-sm leading-6 text-[var(--muted)]">

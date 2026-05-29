@@ -52,7 +52,7 @@ export function DemoLayoutRenderer({ template }: { template: Template }) {
 
 function VibrantLayout({ template }: { template: Template }) {
   return (
-    <section className="px-5 py-14 sm:px-8">
+    <section className="px-4 py-12 sm:px-8 sm:py-14">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[18rem_1fr]">
         <aside className="h-fit rounded-[2rem] border bg-[var(--surface)] p-5" style={{ borderColor: "var(--border)" }}>
           <div className="flex items-center gap-2 text-sm font-black uppercase tracking-[0.2em] text-[var(--accent)]">
@@ -71,8 +71,8 @@ function VibrantLayout({ template }: { template: Template }) {
           <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.28em]" style={{ color: template.accent }}>{template.category}</p>
-              <h1 className="mt-5 text-5xl font-black tracking-tight sm:text-7xl">{template.title}</h1>
-              <p className="mt-6 max-w-2xl text-xl leading-9 text-[var(--muted)]">{template.summary}</p>
+              <h1 className="mt-5 text-4xl font-black tracking-tight sm:text-7xl">{template.title}</h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl sm:leading-9">{template.summary}</p>
             </div>
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem]">
               <Image src={template.image} alt={template.imageAlt} fill priority sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
@@ -95,12 +95,12 @@ function VibrantLayout({ template }: { template: Template }) {
 
 function MinimalistLayout({ template }: { template: Template }) {
   return (
-    <section className="px-5 py-16 sm:px-8">
+    <section className="px-4 py-12 sm:px-8 sm:py-16">
       <div className="mx-auto max-w-7xl">
         <p className="text-sm font-black uppercase tracking-[0.3em] text-[var(--muted)]">{template.category}</p>
-        <h1 className="mt-5 max-w-5xl text-6xl font-black tracking-[-0.06em] sm:text-8xl">{template.title}</h1>
+        <h1 className="mt-5 max-w-5xl text-4xl font-black tracking-[-0.06em] sm:text-8xl">{template.title}</h1>
         <div className="mt-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-          <p className="text-2xl leading-10 text-[var(--muted)]">{template.summary}</p>
+          <p className="text-lg leading-8 text-[var(--muted)] sm:text-2xl sm:leading-10">{template.summary}</p>
           <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border" style={{ borderColor: "var(--border)" }}>
             <Image src={template.image} alt={template.imageAlt} fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover grayscale" />
           </div>
@@ -128,7 +128,7 @@ function MinimalistLayout({ template }: { template: Template }) {
 function KineticLayout({ template }: { template: Template }) {
   const marqueeItems = [template.category, template.title, "Book", "Launch", "Convert"];
   return (
-    <section className="overflow-hidden px-5 py-12 sm:px-8">
+    <section className="overflow-hidden px-4 py-10 sm:px-8 sm:py-12">
       <div className="mx-auto max-w-7xl border-2 bg-[var(--surface)]" style={{ borderColor: "var(--foreground)" }}>
         <div className="overflow-hidden border-b-2 py-3" style={{ borderColor: "var(--foreground)" }}>
           <div className="marquee flex w-max gap-8 text-2xl font-black uppercase tracking-[-0.03em]">
@@ -140,8 +140,8 @@ function KineticLayout({ template }: { template: Template }) {
         <div className="grid gap-0 lg:grid-cols-[1fr_0.9fr]">
           <div className="border-b-2 p-6 sm:p-10 lg:border-b-0 lg:border-r-2" style={{ borderColor: "var(--foreground)" }}>
             <p className="text-sm font-black uppercase tracking-[0.3em]" style={{ color: template.accent }}>{template.category}</p>
-            <h1 className="mt-4 text-6xl font-black uppercase leading-[0.82] tracking-[-0.08em] sm:text-8xl">{template.title}</h1>
-            <p className="mt-8 max-w-2xl text-xl font-bold leading-8 text-[var(--muted)]">{template.summary}</p>
+            <h1 className="mt-4 text-5xl font-black uppercase leading-[0.86] tracking-[-0.08em] sm:text-8xl">{template.title}</h1>
+            <p className="mt-8 max-w-2xl text-lg font-bold leading-7 text-[var(--muted)] sm:text-xl sm:leading-8">{template.summary}</p>
           </div>
           <div className="relative min-h-[28rem]">
             <Image src={template.image} alt={template.imageAlt} fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
@@ -166,15 +166,15 @@ function KineticLayout({ template }: { template: Template }) {
 function DashboardLayout({ template }: { template: Template }) {
   if (!template.dashboardData) return null;
   return (
-    <section className="px-5 py-10 sm:px-8">
+    <section className="px-4 py-10 sm:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.28em]" style={{ color: template.accent }}>Dashboard Vault</p>
-            <h1 className="mt-5 text-5xl font-black tracking-tight sm:text-7xl">{template.title}</h1>
-            <p className="mt-6 text-xl leading-9 text-[var(--muted)]">{template.summary}</p>
+            <h1 className="mt-5 text-4xl font-black tracking-tight sm:text-7xl">{template.title}</h1>
+            <p className="mt-6 text-lg leading-8 text-[var(--muted)] sm:text-xl sm:leading-9">{template.summary}</p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {template.dashboardData.kpis.map((kpi) => (
               <div key={kpi.label} className="rounded-[1.5rem] border bg-[var(--surface)] p-5" style={{ borderColor: "var(--border)" }}>
                 <p className="text-sm text-[var(--muted)]">{kpi.label}</p>

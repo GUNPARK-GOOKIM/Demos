@@ -33,9 +33,9 @@ export function DashboardCharts({ data }: { data: DashboardData }) {
   if (!mounted) {
     return (
       <div className="grid gap-5 lg:grid-cols-[1.35fr_0.65fr]">
-        <div className="h-96 animate-pulse rounded-[1.5rem] border bg-[var(--surface)]" style={{ borderColor: "var(--border)" }} />
-        <div className="h-96 animate-pulse rounded-[1.5rem] border bg-[var(--surface)]" style={{ borderColor: "var(--border)" }} />
-        <div className="h-80 animate-pulse rounded-[1.5rem] border bg-[var(--surface)] lg:col-span-2" style={{ borderColor: "var(--border)" }} />
+        <div className="h-80 animate-pulse rounded-[1.5rem] border bg-[var(--surface)] sm:h-96" style={{ borderColor: "var(--border)" }} />
+        <div className="h-80 animate-pulse rounded-[1.5rem] border bg-[var(--surface)] sm:h-96" style={{ borderColor: "var(--border)" }} />
+        <div className="h-72 animate-pulse rounded-[1.5rem] border bg-[var(--surface)] sm:h-80 lg:col-span-2" style={{ borderColor: "var(--border)" }} />
       </div>
     );
   }
@@ -49,7 +49,7 @@ export function DashboardCharts({ data }: { data: DashboardData }) {
             Live mock
           </span>
         </div>
-        <div className="h-72">
+        <div className="h-64 sm:h-72">
           <ResponsiveContainer width="100%" height="100%">
             <AreaChart data={data.revenue}>
               <defs>
@@ -83,7 +83,7 @@ export function DashboardCharts({ data }: { data: DashboardData }) {
 
       <div className="rounded-[1.5rem] border bg-[var(--surface)] p-5" style={{ borderColor: "var(--border)" }}>
         <h3 className="mb-5 text-lg font-black">Lead Sources</h3>
-        <div className="h-72">
+        <div className="h-64 sm:h-72">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
@@ -113,7 +113,7 @@ export function DashboardCharts({ data }: { data: DashboardData }) {
 
       <div className="rounded-[1.5rem] border bg-[var(--surface)] p-5 lg:col-span-2" style={{ borderColor: "var(--border)" }}>
         <h3 className="mb-5 text-lg font-black">Lead Volume</h3>
-        <div className="h-64">
+        <div className="h-56 sm:h-64">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data.revenue}>
               <CartesianGrid stroke="rgba(127,127,127,0.18)" vertical={false} />
