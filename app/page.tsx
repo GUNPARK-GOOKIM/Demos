@@ -1,5 +1,6 @@
 import { ArrowDown, Code2, Cpu, PanelsTopLeft, DatabaseZap } from "lucide-react";
 import { DemoVault } from "@/components/demo-vault";
+import { QueryForm } from "@/components/query-form";
 import { Reveal } from "@/components/reveal";
 import { capabilities, templates } from "@/data/templates";
 
@@ -125,6 +126,8 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <QueryForm />
     </main>
   );
 }

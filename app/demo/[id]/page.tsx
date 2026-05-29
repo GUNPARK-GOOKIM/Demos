@@ -51,10 +51,10 @@ export default async function DemoPage({ params }: DemoPageProps) {
   return (
     <main>
       <DemoLayoutRenderer template={template} />
-      <QueryForm templateName={template.title} />
       <div id="conversion-footer">
         <ConversionFooter template={template} />
       </div>
+      <QueryForm templateName={template.title} />
     </main>
   );
 }
